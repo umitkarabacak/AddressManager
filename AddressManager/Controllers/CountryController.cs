@@ -49,7 +49,7 @@ namespace AddressManager.Controllers
             await _dbContext.Countries.AddAsync(country);
             await _dbContext.SaveChangesAsync();
 
-            return CreatedAtAction("Get", new { id = country.Id }, country);
+            return CreatedAtAction("Get", new { countryId = country.Id }, country);
         }
 
         [HttpPut("{countryId}")]
@@ -63,7 +63,7 @@ namespace AddressManager.Controllers
                 currentCountry = country;
                 await _dbContext.Countries.AddAsync(currentCountry);
                 await _dbContext.SaveChangesAsync();
-                return CreatedAtAction("Get", new { id = countryId }, currentCountry);
+                return CreatedAtAction("Get", new { countryId }, currentCountry);
             }
 
             currentCountry.NumericCode = country.NumericCode;

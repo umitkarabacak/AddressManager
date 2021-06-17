@@ -15,7 +15,5 @@ namespace AddressManager.Models
 
         public ICollection<City> Cities { get; set; }
             = new HashSet<City>();
-        public ICollection<Address> Addresses { get; set; }
-            = new HashSet<Address>();
     }
 }

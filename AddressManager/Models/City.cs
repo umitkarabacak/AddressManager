@@ -14,7 +14,5 @@ namespace AddressManager.Models
         public Country Country { get; set; }
         public ICollection<District> Districts { get; set; }
             = new HashSet<District>();
-        public ICollection<Address> Addresses { get; set; }
-            = new HashSet<Address>();
     }
 }

@@ -13,9 +13,10 @@ namespace AddressManager.Controllers
     [ApiController]
     public class CityController : ControllerBase
     {
-        private readonly ILogger<ProjectContext> _logger;
+        private readonly ILogger<CityController> _logger;
         private readonly ProjectContext _dbContext;
-        public CityController(ILogger<ProjectContext> logger
+
+        public CityController(ILogger<CityController> logger
             , ProjectContext dbContext)
         {
             _logger = logger;

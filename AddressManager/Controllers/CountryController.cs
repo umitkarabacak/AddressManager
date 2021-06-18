@@ -13,9 +13,10 @@ namespace AddressManager.Controllers
     [ApiController]
     public class CountryController : ControllerBase
     {
-        private readonly ILogger<ProjectContext> _logger;
+        private readonly ILogger<CountryController> _logger;
         private readonly ProjectContext _dbContext;
-        public CountryController(ILogger<ProjectContext> logger
+
+        public CountryController(ILogger<CountryController> logger
             , ProjectContext dbContext)
         {
             _logger = logger;

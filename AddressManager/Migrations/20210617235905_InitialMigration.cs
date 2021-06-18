@@ -50,9 +50,9 @@ namespace AddressManager.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DistrictName = table.Column<int>(type: "int", nullable: false),
-                    DistrictCode = table.Column<int>(type: "int", nullable: false),
-                    DistrictDescription = table.Column<int>(type: "int", nullable: false),
+                    DistrictName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DistrictCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DistrictDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CityId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>

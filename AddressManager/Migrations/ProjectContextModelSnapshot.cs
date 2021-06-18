@@ -4,16 +4,14 @@ using AddressManager.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AddressManager.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20210617230016_InitialMigration")]
-    partial class InitialMigration
+    partial class ProjectContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,14 +104,14 @@ namespace AddressManager.Migrations
                     b.Property<Guid>("CityId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("DistrictCode")
-                        .HasColumnType("int");
+                    b.Property<string>("DistrictCode")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DistrictDescription")
-                        .HasColumnType("int");
+                    b.Property<string>("DistrictDescription")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DistrictName")
-                        .HasColumnType("int");
+                    b.Property<string>("DistrictName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
